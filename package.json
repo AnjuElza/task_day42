@@ -9,6 +9,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "NODE_VERSION":"14.17.0", 
   "keywords": [],
   "author": "",
   "license": "ISC",
