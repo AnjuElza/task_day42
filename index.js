@@ -23,11 +23,9 @@ app.use(express.json());
 app.get("/",function(request,response){
     response.send("Movies details");
 });  
-app.get("/movies",function(request,response){
-    response.send(movies);
-});  
+ 
 
-//get amazon data from db
+//get data from db
 app.get("/movies", async function(request, response) {
     try{
     const movies=await client
