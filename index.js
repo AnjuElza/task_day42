@@ -1,6 +1,7 @@
 import express from "express";
 import * as dotenv from 'dotenv';
 import { MongoClient } from "mongodb";
+import cors from "cors";
 dotenv.config();
 // process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 const PORT=process.env.PORT;
@@ -8,7 +9,10 @@ const app=express();
 
 app.use(express.json());
 
-
+app.use(cors({
+  origin: '*'
+}));
+app.use(express.json());
 
   //Mongodb connection
  //const MONGO_URL="mongodb://127.0.0.1";
